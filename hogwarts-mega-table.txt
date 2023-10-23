@@ -1,0 +1,8 @@
+Name              Preferred   ID    Cr#    Course Title     Year    Semester
+---------------------------------------------------------------------------------
+Potter, Harold    Harry       123   P101   Intro Potions    2014    Spring
+Granger, Hermione Hermione    456   P101   Intro Portions   2014    Spring
+Weasly, Ronald    Ron         789   D666   Def Dark Arts    2017    Fall
+Malfoy, Draco     Draco       666   D666   Def Arts Dark    2017    Spring
+Granger, Hermione Hermione    456   H256   Hist of Magic    2016    Fall
+Potter, Harold    Harry       123   P101   Intro Potions    2014    Fall
