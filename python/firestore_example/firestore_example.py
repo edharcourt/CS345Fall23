@@ -47,6 +47,21 @@ student1 = \
 s = json.dumps(student1, indent=4)
 print(s)
 
+doc = students.document(u'student2')
+doc.set(
+    {
+        "courses" : [{"coursenum" : "H101",
+                      "title" : "Herbology",
+                      "semester" : "Spring",
+                      "year" : 2009},
+
+                     {"coursenum" : "C101",
+                      "title" : "Charms",
+                      "semester" : "Spring",
+                      "year" : 2008}],
+        "name" : {"first" : "Ron", "last" : "Weasley"}
+    }
+)
 
 # Update a document
 doc.update({u'name.first' : u'Ronald'})
