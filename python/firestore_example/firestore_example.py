@@ -10,6 +10,47 @@ firebase_admin.initialize_app(cred)
 
 db = firestore.client()
 
+# Create a document with id
+doc_ref = db.collection("laptops").document("2")
+doc_ref.set(
+    {
+        "name": "MacBook Air M2",
+        "brand": "Apple",
+    }
+)
+
+doc_ref = db.collection("laptops").document("1")
+doc_ref.set(
+    {
+        "name": "HP EliteBook Model 1",
+        "brand": "HP",
+    }
+)
+
+doc_ref = db.collection("laptops").document("3")
+doc_ref.set(
+    {
+        "name": "Lenovo IdeaPad Model 2",
+        "brand": "Lenovo",
+        "tags": ["Popular", "Latest"],
+        "order": {"price": 9405.0, "quantity": 2},
+    }
+)
+
+# autogenerate id
+create_time, doc_ref = db.collection("laptops").add(
+    {
+        "name": "Apple macbook air",
+        "brand": "Apple",
+    }
+)
+
+# get document by id
+doc_ref = db.collection("laptops").document("1")
+print(doc_ref.get().to_dict())
+
+
+# Create a collection implicitly
 students = db.collection(u'students')
 
 """
