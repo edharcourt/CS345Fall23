@@ -3,8 +3,10 @@ from firebase_admin import credentials
 from firebase_admin import firestore
 import json
 
-cred = credentials.Certificate("C:/Users/ehar/OneDrive - St. Lawrence University/CS345Fall23/" +
-                               "cs345fall23-firebase-adminsdk-sw4jj-5d4fa257cc.json")
+# Use a service account
+base = "C:/Users/ehar/OneDrive - St. Lawrence University/CS345Fall23"
+private_key_file = "cs345fall23-firebase-adminsdk-sw4jj-5d4fa257cc.json"
+cred = credentials.Certificate(f'{base}/{private_key_file}')
 
 firebase_admin.initialize_app(cred)
 
